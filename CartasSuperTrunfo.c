@@ -87,9 +87,8 @@ struct carta{
    printf("numero_de_ponto_turistico: \n");
    scanf("%d", &carta2.numero_de_ponto_turistico);
 
-
-
-
+   carta1.densidade_populacional = (double)carta1.populacao / carta1.area_km2;
+   carta1.pib_per_capita = carta1.pib / carta1.populucao;
 
    printf("Digite o estado: %s\n Digite o codigo_carta: %s\n", carta2.estado, carta2.codigo_carta);
    printf("Cidade: %s\n Populacao: %d\n", carta2.nome_cidade, carta2.populacao);
@@ -105,7 +104,7 @@ struct carta{
 
 
 
-
+   }
 
 
 
