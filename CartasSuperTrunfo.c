@@ -9,9 +9,10 @@ struct carta{
    float area_km2;
    float pib;
    int numero_de_ponto_turistico;
+   double densidade_populacional;
+   double pib_per_capita;
 
-
-};
+};  
 
    int main(){
    //criação das cartas
@@ -50,15 +51,16 @@ struct carta{
    printf("Digite o numero_de_ponto_turistico: \n");
    scanf("%d", &carta1.numero_de_ponto_turistico);
 
+   carta1.densidade_populacional = (double)carta1.populacao / carta1.area_km2;
+   carta1.pib_per_capita = carta1.pib / carta1.populucao;
+
    printf("Nome do estado: %s\n Codigo_carta: %s\n", carta1.estado, carta1.codigo_carta);
    printf("Nome da cidade: %s\n Populacao: %d\n", carta1.nome_cidade, carta1.populacao);
    printf("area_km2: %.2f\n", carta1.area_km2);
    printf("pib: %.2f\n", carta1.pib);
    printf("numero_de_ponto_turistico: %d\n", carta1.numero_de_ponto_turistico);
-
-   
-   
-   
+   printf("Densidade Populacional: %.2lf habitantes/km2\n", carta1.densidade_populacional);
+   printf("Pib per capita: %.2lf reais/populacao\n", carta1.pib_per_capita);
    
    
    
@@ -94,7 +96,9 @@ struct carta{
    printf("area_km2: %.2f\n", carta2.area_km2);
    printf("pib: %.2f\n", carta2.pib);
    printf("numero_de_ponto_turistico: %d\n", carta2.numero_de_ponto_turistico);
-
+   printf("Densidade Populacional: %.2lf habitantes/km2\n", carta1.densidade_populacional);
+   printf("Pib per capita: %.2lf reais/populacao\n", carta1.pib_per_capita);
+   
 
 
    return 0;
